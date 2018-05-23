@@ -13,7 +13,6 @@ namespace Client
         static void Main(string[] args)
         {
             MyServiceClient client = new MyServiceClient();
-            client.initUsers();
             bool login = false;
             Dictionary<string, string> contacts;
             while (login == false)

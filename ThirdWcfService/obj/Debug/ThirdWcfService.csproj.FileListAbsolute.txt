@@ -4,4 +4,3 @@ C:\Users\Sziszka\source\repos\ThirdWcfService\ThirdWcfService\bin\ThirdWcfServic
 C:\Users\Sziszka\source\repos\ThirdWcfService\ThirdWcfService\obj\Debug\ThirdWcfService.csproj.CoreCompileInputs.cache
 C:\Users\Sziszka\source\repos\ThirdWcfService\ThirdWcfService\obj\Debug\ThirdWcfService.dll
 C:\Users\Sziszka\source\repos\ThirdWcfService\ThirdWcfService\obj\Debug\ThirdWcfService.pdb
-C:\Users\Sziszka\source\repos\ThirdWcfService\ThirdWcfService\obj\Debug\ThirdWcfService.csprojResolveAssemblyReference.cache

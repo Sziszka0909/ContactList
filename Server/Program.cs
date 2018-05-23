@@ -12,7 +12,6 @@ namespace Server
         static void Main(string[] args)
         {
             ThirdWcfService.MyService service = new ThirdWcfService.MyService();
-            service.initUsers();
             ServiceHost host = new ServiceHost(service);
             host.Open();
             Console.Read();

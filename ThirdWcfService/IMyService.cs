@@ -21,9 +21,6 @@ namespace ThirdWcfService
         void Logout(string username);
 
         [OperationContract]
-        void initUsers();
-
-        [OperationContract]
         string addContact(string username, string phonenumber);
 
         [OperationContract]

@@ -44,7 +44,7 @@ namespace DesktopCLient
         {
             MyServiceClient client = new MyServiceClient();
             PopUpForm popUpForm = new PopUpForm();
-            client.initUsers();
+            //client.initUsers();
             Username = UsernameField.Text;
             string Password = PasswordField.Text;
             bool Login = client.Login(Username, Password);

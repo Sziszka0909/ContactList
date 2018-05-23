@@ -14,7 +14,11 @@ namespace ThirdWcfService
     {
 
         Dictionary<string, Guid> ids = new Dictionary<string, Guid>();
-        Dictionary<string, string> users = new Dictionary<string, string>();
+        Dictionary<string, string> users = new Dictionary<string, string>()
+        {
+            {"Jim", "Jimpass" },
+            {"John", "Johnpass" }
+        };
         Dictionary<string, string> contacts = new Dictionary<string, string>();
 
         public string addContact(string name, string phonenumber)
@@ -43,15 +47,6 @@ namespace ThirdWcfService
             } else
             {
                 return "Contactlist doesn't contains this contact.";
-            }
-        }
-
-        public void initUsers()
-        {
-            if(!users.ContainsKey("Jim") && !users.ContainsKey("John"))
-            {
-                users.Add("Jim", "Jimpass");
-                users.Add("John", "Johnpass");
             }
         }
 
