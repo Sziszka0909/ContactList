@@ -23,8 +23,8 @@ namespace ThirdWcfService
             if (contacts.ContainsKey(name))
             {
                 return "Contactlist already contains this name.";
-                
-            } else if (errorCounter == 0)
+
+            } else if (errorCounter == 0 && phonenumber.Length > 8)
             {
                 contacts.Add(name, phonenumber);
                 return "Contact added to contactlist.";
@@ -57,6 +57,7 @@ namespace ThirdWcfService
 
         public bool Login(string username, string password)
         {
+            ids.Clear();
             if (users.ContainsKey(username))
             {
                 string pass = users[username];
