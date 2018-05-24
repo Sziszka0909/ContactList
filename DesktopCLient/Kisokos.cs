@@ -13,11 +13,18 @@ namespace DesktopCLient
 {
     public partial class Kisokos : Form
     {
+        //Set the controlbox false, because I dont want to somebody can exit with the X button.
         public Kisokos()
         {
             InitializeComponent();
+            this.ControlBox = false;
         }
 
+        //This is the Add button.
+        //I clear the message field every click.
+        //Initialize a MyServiceClient.
+        //Get the contactName and contactNumber from the addContactName field and addContactNumber field and saved it in 2 variable.
+        //Message field will equals with the addContact method returned value.
         private void button1_Click(object sender, EventArgs e)
         {
             message.Text = "";
@@ -27,6 +34,11 @@ namespace DesktopCLient
             message.Text = client.addContact(contactName, contactNumber);
         }
 
+        //This is the Delete button.
+        //I clear the message field every click.
+        //Initialize a MyServiceClient.
+        //Get the deleteName from the deleteContact field and saved it in the variable.
+        //Message field will equals with the deleteContact method returned value.
         private void button2_Click(object sender, EventArgs e)
         {
             message.Text = "";
@@ -35,6 +47,11 @@ namespace DesktopCLient
             message.Text = client.deleteContact(deleteName);
         }
 
+        //This is the Log Out button.
+        //Initialize a MyServiceClient.
+        //Call the LogOut method with the Form1 static variable.
+        //Hide this window.
+        //Create a new Form1 instance, and show it.
         private void button4_Click(object sender, EventArgs e)
         {
             MyServiceClient client = new MyServiceClient();
@@ -45,11 +62,18 @@ namespace DesktopCLient
 
         }
 
+        //This is the Show all contact button.
+        //Create a new allContact instance, hide this window, and show the allContact window.
         private void button3_Click(object sender, EventArgs e)
         {
             AllContact allContact = new AllContact();
             this.Hide();
             allContact.Show();
+        }
+
+        private void Kisokos_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -10,6 +10,22 @@ namespace Client
 {
     class Program
     {
+        //This is the first version of my client app, I created a console application.
+        //I create a boolean login field and set it false.
+        //Declare a contacts field.
+        //While the login field is false, the application ask the Username and Password.
+        //If we give a valid Username-Password duo, login field will true, and we log in.
+        //Initialize a new userinput.
+        //While the userinput is not equal "0", "1", "2" or "3", the application ask the userinput.
+        //If we type "1", we can add new contact to the contactlist with server's addContact method.
+        //The app ask the contactName and contactNumber from us.
+        //If we type "2", we can show all the contact from the contactlist with server's showContact method.
+        //I use a for statement for this.
+        //If we type "3", we can delete a contact from the contactlist with server's deleteContact method.
+        //The application ask the contactName you want to delete, and if it's valid the contact will be deleted.
+        //Else we get an error message.
+        //If we type "0", we can log out with server's Logout method.
+        //Login field set to false, and exit the inner while statement with break keyword.
         static void Main(string[] args)
         {
             MyServiceClient client = new MyServiceClient();

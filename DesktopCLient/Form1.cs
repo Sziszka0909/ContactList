@@ -13,6 +13,7 @@ namespace DesktopCLient
 {
     public partial class Form1 : Form
     {
+        //Declare a static Username variable, because I want to use this value an another class, so this is a public field.
         public static string Username;
 
         public Form1()
@@ -40,6 +41,14 @@ namespace DesktopCLient
 
         }
 
+        //button1 is the login button
+        //Initialize a MyServiceClient, with this instance I can use the servers method's.
+        //Create a new PopUpForm, maybe I will use this later.
+        //From the UsernameField I read the value, and save this in the Username field.
+        //Same with the PasswordField.
+        //I call the Login method from server side, and save the returned value in a boolean field.
+        //If this boolean is false I show a popUpForm and clear the UsernameField and PasswordField.
+        //Else the login is successfully, hide this window, initialize a new Kisokos instance and show it.
         private void button1_Click(object sender, EventArgs e)
         {
             MyServiceClient client = new MyServiceClient();

@@ -12,6 +12,7 @@ namespace DesktopCLient
 {
     public partial class PopUpForm : Form
     {
+        //This form show if you type invalid password or username or both.
         public PopUpForm()
         {
             InitializeComponent();
@@ -22,9 +23,10 @@ namespace DesktopCLient
 
         }
 
+        //This is the OK button on the form.
+        //If you clicked it, this window will hide.
         private void button1_Click(object sender, EventArgs e)
         {
-            Form1 login = new Form1();
             this.Hide();
         }
     }

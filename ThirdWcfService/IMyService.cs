@@ -7,12 +7,10 @@ using System.Text;
 
 namespace ThirdWcfService
 {
-    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IMyService" in both code and config file together.
-    [ServiceContract]
+    //This interface contains the methods, that I will be implements in MyService.
+   [ServiceContract]
     public interface IMyService
     {
-        [OperationContract]
-        string Message();
 
         [OperationContract]
         bool Login(string username, string password);

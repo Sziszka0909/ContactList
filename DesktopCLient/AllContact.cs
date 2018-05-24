@@ -13,9 +13,11 @@ namespace DesktopCLient
 {
     public partial class AllContact : Form
     {
+        //Set the controlbox false, because I dont want to somebody can exit with the X button.
         public AllContact()
         {
             InitializeComponent();
+            this.ControlBox = false;
         }
 
         private void AllContact_Load(object sender, EventArgs e)
