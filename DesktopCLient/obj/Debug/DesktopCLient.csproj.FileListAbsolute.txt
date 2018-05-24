@@ -10,3 +10,4 @@ C:\Users\Sziszka\source\repos\ThirdWcfService\DesktopCLient\obj\Debug\DesktopCLi
 C:\Users\Sziszka\source\repos\ThirdWcfService\DesktopCLient\obj\Debug\DesktopCLient.pdb
 C:\Users\Sziszka\source\repos\ThirdWcfService\DesktopCLient\obj\Debug\DesktopCLient.Kisokos.resources
 C:\Users\Sziszka\source\repos\ThirdWcfService\DesktopCLient\obj\Debug\DesktopCLient.AllContact.resources
+C:\Users\Sziszka\source\repos\ThirdWcfService\DesktopCLient\obj\Debug\DesktopCLient.csprojResolveAssemblyReference.cache

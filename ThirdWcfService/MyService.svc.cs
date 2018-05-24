@@ -23,30 +23,41 @@ namespace ThirdWcfService
 
         public string addContact(string name, string phonenumber)
         {
-            int errorCounter = Regex.Matches(phonenumber, @"[a-zA-Z]").Count;
-            if (contacts.ContainsKey(name))
+            lock (contacts)
             {
-                return "Contactlist already contains this name.";
+                int errorCounter = Regex.Matches(phonenumber, @"[a-zA-Z]").Count;
+                if (contacts.ContainsKey(name))
+                {
+                    return "Contactlist already contains this name.";
 
-            } else if (errorCounter == 0 && phonenumber.Length > 8)
-            {
-                contacts.Add(name, phonenumber);
-                return "Contact added to contactlist.";
-            } else
-            {
-                return "Invalid phonenumber.";
+                }
+                else if (errorCounter == 0 && phonenumber.Length > 8)
+                {
+                    contacts.Add(name, phonenumber);
+                    return "Contact added to contactlist.";
+                }
+                else
+                {
+                    return "Invalid phonenumber.";
+                }
             }
         }
 
         public string deleteContact(string username)
         {
-            if (contacts.ContainsKey(username))
+
+            lock (contacts)
             {
-                contacts.Remove(username);
-                return "Contact deleted.";
-            } else
-            {
-                return "Contactlist doesn't contains this contact.";
+
+                if (contacts.ContainsKey(username))
+                {
+                    contacts.Remove(username);
+                    return "Contact deleted.";
+                }
+                else
+                {
+                    return "Contactlist doesn't contains this contact.";
+                }
             }
         }
 
@@ -81,7 +92,10 @@ namespace ThirdWcfService
 
         public Dictionary<string, string> showContact()
         {
-            return contacts;
+            lock (contacts)
+            {
+                return contacts;
+            }
         }
     }
 }
